@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMS</title>
+    <style>
+        #root{
+            display: grid;
+            grid-template-columns: 4fr 8fr;
+            gap: 20px;
+        }
+        #form{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        #table, thead, tr, th, td{
+            align-self: start;
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+        td{
+            text-align: center;
+        }
+        .col-btn{
+            background-color: red;
+            color: white;
+            border-radius: 2px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <form id="form">
+            <input type="text" required placeholder="Employee Name" name="name">
+            <input type="email" required placeholder="Mail I'd" name="email">
+            <input type="text" required placeholder="Employee I'd" name="empId">
+            <input type="text" required placeholder="Company" name="company">
+            <select name="designation">
+                <option value="SDE">SDE</option>
+                <option value="TL">TL</option>
+                <option value="Manager">Manager</option>
+                <option value="Intern">Intern</option>
+            </select>
+            <button style="cursor: pointer; background-color: tomato; color: white; border: none;">Add Employee</button>
+        </form>
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>Employee Name</th>
+                    <th>Email</th>
+                    <th>Employee I'd</th>
+                    <th>Company</th>
+                    <th>Designation</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <!-- <tbody>
+                <tr>
+                    <td>Rajat</td>
+                    <td>abc@gmail.com</td>
+                    <td>gdvcdd</td>
+                    <td>accio</td>
+                    <td>SDE</td>
+                    <td><button class="col-btn" onclick="deleteEmployee(this)" data-empId="empId">Delete</button></td>
+                </tr>
+            </tbody> -->
+        </table>
+    </div>
+
+    <script src="./Employee.js"></script>
+</body>
+</html>
